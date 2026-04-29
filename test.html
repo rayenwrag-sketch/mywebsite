@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Pro Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="control.js"></script>
+</head>
+
+<body>
+
+<nav>
+    <div class="container">
+        <h1>DB Learning</h1>
+        <ul>
+            <li><a href="base_page.html">Database</a></li>
+            <li><a href="LMM.html">DDL</a></li>
+            <li><a href="LMD.html">DML</a></li>
+            <li><a href="test.html" class="active">test</a></li>
+            
+        </ul>
+    </div>
+</nav>
+
+
+<!-- VIDEO BACKGROUND -->
+<div class="video-background">
+    <video autoplay muted loop playsinline>
+        <source src="https://media.istockphoto.com/id/2156434426/video/futuristic-digital-data-stream-with-glowing-lines-of-abstract-binary-code-on-a-dark-green.mp4?s=mp4-640x640-is&k=20&c=5nLRNX-zjrY6gBzwQivzTfzNTI-KRasFiOkmLZQs150=
+" type="video/mp4">
+    </video>
+</div>
+
+
+<header class="top">
+    <h1>TEST YOURSELF</h1>
+    <p>DDL • DML • SQL Interactive Learning System</p>
+</header>
+
+<div class="menu">
+    <button onclick="startQuiz('ddl')">DDL</button>
+    <button onclick="startQuiz('dml')">DML</button>
+    <button onclick="startQuiz('sql')">SQL</button>
+</div>
+
+<div class="hud">
+    <div>Question: <span id="qnum">1</span></div>
+    <div>Score: <span id="score">0</span></div>
+    <div>⏱️ <span id="time">15</span>s</div>
+</div>
+
+<div class="progress">
+    <div id="bar"></div>
+</div>
+
+<div id="quizBox" class="card"></div>
+
+<script src="app.js"></script>
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <h2 class="footer-title">DB Learning</h2>
+        <p class="footer-desc">
+            Learn databases the modern way.
+        </p>
+
+        <div class="footer-links">
+            <a href="base_page.html">Database</a>
+            <a href="LMM.html">DDL</a>
+            <a href="LMD.html">DML</a>
+        </div>
+
+        <p class="footer-copy">
+            © 2026 DB Learning
+        </p>
+    </div>
+</footer>
+</body>
+</html>

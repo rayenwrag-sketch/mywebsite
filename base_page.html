@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Basics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <h1>DB Learning</h1>
+        <ul>
+            <li><a href="base_page.html" class="active">Database</a></li>
+            <li><a href="LMM.html">DDL</a></li>
+            <li><a href="LMD.html">DML</a></li>
+            <li><a href="test.html" >Test</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="container">
+
+<h2>What is a Database?</h2>
+<div class="card">
+<p>
+A database is a structured system used to store, manage, and retrieve data efficiently.
+Unlike simple files, databases ensure consistency, integrity, and security of data.
+</p>
+
+<!-- IMAGE: diagram showing database storing data -->
+<img src="https://www.lmiweb.com/sites/default/files/inline-images/March%20Blog%20Legal%20Tech%20Timeline_0.png" width="100%">
+
+<p>
+A database is not just storage — it is an intelligent system that allows efficient searching,
+multi-user access, and strong data relationships.
+</p>
+
+<p>
+For students, understanding databases is essential because it forms the foundation of modern applications,
+including websites, mobile apps, and enterprise systems.
+</p>
+</div>
+
+<h2>Evolution of Databases</h2>
+<div class="card">
+<p>
+Databases evolved from simple file systems to complex distributed systems:
+</p>
+
+<!-- IMAGE: timeline of database evolution -->
+<img src="data:image/jpeg;base64,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" width="100%">
+
+<ul>
+<li><b>File systems:</b> No structure, duplication issues</li>
+<li><b>Hierarchical DB:</b> Tree structure</li>
+<li><b>Relational DB:</b> Tables and SQL</li>
+<li><b>NoSQL:</b> Flexible, scalable systems</li>
+</ul>
+
+<p>
+This evolution shows how data management became more powerful and efficient over time,
+helping developers handle larger and more complex systems.
+</p>
+</div>
+
+<h2>Types of Databases</h2>
+<div class="card">
+
+<h3>Relational Databases</h3>
+<p>Structured tables with relations (e.g. MySQL)</p>
+<!-- IMAGE: table structure with rows and columns -->
+<img src="" width="100%">
+
+<h3>NoSQL Databases</h3>
+<p>Flexible data (JSON, key-value, graph)</p>
+
+<h3>Distributed Databases</h3>
+<p>Spread across multiple servers</p>
+<img src="https://conceptdraw.com/a889c3/p1/preview/640/pict--computer-network-diagram-template-computer-network-diagram---template.png--diagram-flowchart-example.png" width="100%">
+
+<p>
+Each type is used in different scenarios depending on the needs of performance, flexibility, and scalability.
+</p>
+</div>
+
+<h2>DBMS (Database Management System)</h2>
+<div class="card">
+<p>
+A DBMS is software used to interact with databases. It handles storage, retrieval, and security.
+</p>
+
+<img src=" C:\Users\ourag\Downloads\ Image 26 avr. 2026, 00_27_24.png" width="100%">
+
+<p>
+DBMS systems also enforce rules such as constraints and permissions, ensuring that only authorized users can access or modify the data.
+</p>
+
+<table>
+<tr><th>DBMS</th><th>Description</th></tr>
+<tr><td>MySQL</td><td>Open-source relational DB</td></tr>
+<tr><td>Oracle</td><td>Enterprise DBMS</td></tr>
+</table>
+</div>
+
+<h2>Architecture</h2>
+<div class="card">
+<p>
+Most databases use a Client-Server model:
+</p>
+
+
+<img src="https://images.openai.com/static-rsc-4/rgN-NL50DR3M9EY0ZENeIYM6UdEyOGA2xJwKMq87MMko-qXXUUzUQecn1qZhL88-NYNLDkcZFg-FbIlHi8CHVDJbz9xuQlI9CTOBL44PL_vnc9Yz6CL02fyFsJSGzuPJf7nlQOr1nGH8zEEH3ztrypDc1co5T4Ju-CuhqZf7_vV7_D5gl3BkyJGGoBkaPRcZ?purpose=fullsize" width="100%">
+
+<ul>
+<li>Client: Sends requests</li>
+<li>Server: Processes queries</li>
+</ul>
+
+<p>
+This architecture allows efficient communication and ensures that data processing is handled centrally.
+</p>
+</div>
+
+<h2>Real-world Applications</h2>
+<div class="card">
+
+<!-- IMAGE: real world systems like banking or e-commerce -->
+<img src="https://media.istockphoto.com/id/1409316624/photo/an-example-of-the-structure-of-relational-database-tables-for-storing-data-for-analysis-and.jpg?s=612x612&w=0&k=20&c=ZaTf_lPOQCpS9BkZe79t3Ccy1gEvbcsEg2kHjz_Bu6Q=" width="100%">
+
+<ul>
+<li>Banking systems</li>
+<li>E-commerce platforms</li>
+<li>Social networks</li>
+<li>Healthcare systems</li>
+</ul>
+
+<p>
+Databases are used in almost every digital system today, making them one of the most important technologies to learn.
+</p>
+</div>
+
+<!-- ================= NEW EDUCATIONAL CONTENT ================= -->
+
+<h2>Advantages of Databases for Students</h2>
+<div class="card">
+<p>
+Learning databases helps students understand how real-world systems manage information.
+It also improves logical thinking and problem-solving skills.
+</p>
+
+<!-- IMAGE: student coding or learning -->
+<img src="https://plus.unsplash.com/premium_photo-1663075847012-c781e0d194ce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGFyayUyMGNvZGluZyUyMHN0dWRlbnR8ZW58MHx8MHx8fDA%3D" width="100%">
+
+<ul>
+<li>Build real-world applications</li>
+<li>Understand backend systems</li>
+<li>Improve data organization skills</li>
+<li>Prepare for IT careers</li>
+</ul>
+</div>
+
+<h2>Practice Questions</h2>
+<div class="card">
+<p><b>1.</b> What is a database?</p>
+<p><b>2.</b> What is the difference between DBMS and database?</p>
+<p><b>3.</b> Why is data integrity important?</p>
+<p><b>4.</b> Give examples of real-world database usage.</p>
+
+
+<img src="C:\Users\ourag\Downloads\Gemini_Generated_Image_cqb0cccqb0cccqb0.png" width="100%">
+</div>
+
+<h2>Mini Conclusion</h2>
+<div class="card">
+<p>
+Databases are at the heart of modern technology. From small applications to global systems,
+they ensure that data is stored, organized, and accessed efficiently.
+</p>
+
+<!-- IMAGE: global data network -->
+<img src="https://images.openai.com/static-rsc-4/IEfhh8sOf4aLGNyHFsy0buciQsWbKRm-EvTVsOSrtyYOh_7RKpAeN9-MVOBKHiko2O4xabhcaDrWVAuzKCv9T8VktZF1t91VvecGhwUzHNnOptjzfHnPWKQZFADrIp5RJ9kcYzgM0Tb9LmSWObkU0OawEY-9MfpspcZY3sB9hJRaWb7gD3z5JyjF02d2IaMC?purpose=fullsize" width="100%">
+
+<p>
+For students, mastering databases is a key step toward becoming skilled developers and IT professionals.
+</p>
+</div>
+
+</section>
+
+<!-- VIDEO BACKGROUND -->
+<div class="video-background">
+    <video autoplay muted loop playsinline>
+        <source src="https://media.istockphoto.com/id/2271293519/video/futuristic-digital-data-grid-glowing-light-data-grid-and-fast-moving-light-streaks-forming-a.mp4?s=mp4-640x640-is&k=20&c=TpBSOvXE62lmQP-wL31cVq2_ECyYmZgi_qY0lo_JMog=">
+    </video>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <h2 class="footer-title">DB Learning</h2>
+        <p class="footer-desc">
+            Learn databases the modern way.
+        </p>
+
+        <div class="footer-links">
+            <a href="base_page.html">Database</a>
+            <a href="LMM.html">DDL</a>
+            <a href="LMD.html">DML</a>
+        </div>
+
+        <p class="footer-copy">
+            © 2026 DB Learning
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

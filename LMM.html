@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DDL</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* video styling inside card */
+        .schema-video {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <h1>DB Learning</h1>
+        <ul>
+            <li><a href="base_page.html">Database</a></li>
+            <li><a href="LMM.html" class="active">DDL</a></li>
+            <li><a href="LMD.html">DML</a></li>
+            <li><a href="test.html" >Test</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="container">
+
+<h2>What is DDL?</h2>
+<div class="card">
+<p>DDL (Data Definition Language) Summary
+Structure First: Acts as the database blueprint to CREATE, ALTER, or DROP tables, schemas, and indexes.
+
+The Container: Focuses on the "buckets" (metadata) rather than the data itself, setting types and constraints.
+
+Rule Enforcer: Defines Primary and Foreign Keys to maintain data integrity and organization.
+
+Auto-Commit: Executes changes permanently and immediately, meaning structural updates cannot be rolled back.
+</p>
+
+<img src="https://dbschema.com/blog/design/entity-relationship-diagram/database-er-diagram@2x.webp">
+<!-- image: database ER diagram / structure overview -->
+</div>
+
+<h2>In-depth Understanding of DDL</h2>
+<div class="card">
+<p>
+DDL is a fundamental part of SQL that allows developers to define the structure of a database.
+It does not manipulate data directly, but instead focuses on how data is stored and organized.
+</p>
+
+<p>
+When you create or modify a table, you are defining the blueprint of how data will exist in the system.
+This is essential for maintaining consistency across large applications.
+</p>
+
+<img src="https://www.sqlservercentral.com/wp-content/uploads/2025/06/Picture-1.png">
+<!-- image: database architecture / schema explanation -->
+</div>
+
+<h2>Why DDL is Important?</h2>
+<div class="card">
+<ul>
+<li>Creates database structure</li>
+<li>Defines rules for data integrity</li>
+<li>Ensures consistency across tables</li>
+<li>Helps organize large systems efficiently</li>
+</ul>
+
+<p>
+Without DDL, databases would have no structure, making them unreliable and chaotic.
+</p>
+
+<img src="https://images.openai.com/static-rsc-4/u0bflXc8wepgQWO4MK0CPcK7wGhNovvki9K8BI8PpkQs5_eo4MlI0FP8efIZauIfWmgrGuBoVsZkRq6xwsY2DzgzO97G8Rq-kUmrWP9QVvkXRJqn9XkgGbZkcY_q8Kd2POnQKUIE5o2T4VgF-YMBZ6QVu7pYiVO_5DxtZYkKqA-cxXH6j9OEH5YqzWmJ9vt8?purpose=fullsize">
+<!-- image: database concept / structure visualization -->
+</div>
+
+<h2>CREATE TABLE</h2>
+<div class="card">
+<p>Creates a new table in the database.</p>
+
+<pre><code>
+CREATE TABLE students (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT
+);
+</code></pre>
+
+<p><b>Explanation:</b></p>
+<ul>
+<li>CREATE TABLE → defines a new structure</li>
+<li>id → unique identifier</li>
+<li>PRIMARY KEY → ensures uniqueness</li>
+</ul>
+<video class="schema-video" autoplay muted loop playsinline>
+    <source src="https://dbdiagram.io/dbdiagram-demo.webm" type="video/mp4">
+</video>
+
+<!-- image: table creation diagram / ER schema example -->
+</div>
+
+<h2>ALTER TABLE</h2>
+<div class="card">
+<p>
+ALTER TABLE allows modification of existing tables without deleting data.
+</p>
+
+<pre><code>
+ALTER TABLE students ADD email VARCHAR(100);
+</code></pre>
+
+<p>
+This is useful when applications evolve and new data fields are required.
+</p>
+
+<img src="https://www.datensen.com/images/database-diagram.jpg">
+
+</div>
+
+<h2>DROP TABLE</h2>
+<div class="card">
+<p>
+DROP TABLE permanently removes a table and all its data.
+</p>
+
+<pre><code>
+DROP TABLE students;
+</code></pre>
+
+<p>
+⚠ This operation is irreversible and should be used carefully.
+</p>
+
+<img src="https://chatgpt.com/backend-api/estuary/content?id=file_00000000a66c720a89d4c4a0e26bef39&ts=493657&p=fs&cid=1&sig=7055b9916e04a55d65ab57c87499e465aac85f5e6635075b1513dfdfb09c4d6c&v=0">
+</div>
+
+<h2>TRUNCATE TABLE</h2>
+<div class="card">
+<p>
+TRUNCATE removes all data inside a table but keeps its structure intact.
+</p>
+
+<pre><code>
+TRUNCATE TABLE students;
+</code></pre>
+
+<p>
+This is faster than DELETE because it does not log individual row deletions.
+</p>
+
+<img src="https://images.openai.com/static-rsc-4/mtEOanU4imfi_FyuPhBVNHSrT9A2uq_c6CV5txJIhZ9OFk_jQrWiuheaMxEAGpcC9f5M3IkXL0NvjhVtCJkBq_FJx8aKGzaCd9-NbWwMgGnwktQAjxQFGOiqsg-cfvsdyEfozsGpTVxUhskbrswrMSFc56mvKAsqS0SogbHKjws2qcA_ATH_S3o9fGCC6K8e?purpose=fullsize">
+
+</div>
+
+<h2>DDL vs DML</h2>
+<div class="card">
+<p>
+DDL focuses on structure, while DML focuses on data manipulation.
+</p>
+
+<ul>
+<li>DDL → defines tables and schema</li>
+<li>DML → inserts, updates, deletes data</li>
+</ul>
+
+<img src="https://images.openai.com/static-rsc-4/P89BgU0w3k3Un3qdrKJTy_KEO6D_35HtHotFgOQOHc1aIT-JY6G5kOY7R1Ruv7LHntYGF74Fdxs2mGZ65jmR0bJzYZRhqznqfBC5wOBPYA6o1-xuBXiiQYfcPIu-xXEdapih8j3K4YcQJBWORU29c4xEk4knBuw4CW4B4N636oKqqJQQKVBxR21DVVqRSuhg?purpose=fullsize">
+<!-- image: comparison diagram DDL vs DML -->
+</div>
+
+<h2>Real-world Usage</h2>
+<div class="card">
+<p>
+DDL is used in every system that relies on structured data:
+banking systems, e-commerce platforms, and social networks.
+</p>
+
+<img src="https://images.openai.com/static-rsc-4/aJFLWRu5mGgCUU2oc_zsjJ-H-1wgqNy3E8XAJVE-eCyF5RxCKY4AgnusTaV9kEHcKbALoHFCXTCjp6IlM4UTKw0aubqFACS-xb8ASjYxpMUh4Sz9QyAtVX8wfXAvZm9OJWCrBGfw6F-uuCpt9kz32D83De3XkLGhxvvKC9l4Pnd551pJH3Pj4RGLNxB7RLkR?purpose=fullsize">
+<!-- image: real life applications of databases -->
+</div>
+
+<h2>Exercises</h2>
+<div class="card">
+<p><b>Easy:</b> Create a table "books"</p>
+<p><b>Medium:</b> Add column "price"</p>
+<p><b>Hard:</b> Design a full school database system</p>
+
+<img src="https://images.openai.com/static-rsc-4/WDoh1ra8ZlY77AXffK_IU5AtJWDIH6qMebqZgxkbgy7MTHJHisPfni6qskT5kjz_b_ldJ84w0RCVw3LBg6emIR2yO1pa7Rj0MypKatcT6U2LcM5zW3cElkztU8gFxJsNqAJQm65U6TNDo1neRRPavRnA0OHqS4eNofpX4Pd6sHZKY570ps9GhJ1Ryrcxs63B?purpose=fullsize">
+</div>
+
+</section>
+
+<div class="video-background">
+    <video autoplay muted loop playsinline>
+        <source src="C:\Users\ourag\Downloads\istockphoto-1700675341-640_adpp_is.mp4" type="video/mp4">
+    </video>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <h2 class="footer-title">DB Learning</h2>
+        <p class="footer-desc">
+            Learn databases the modern way.
+        </p>
+
+        <div class="footer-links">
+            <a href="base_page.html">Database</a>
+            <a href="LMM.html">DDL</a>
+            <a href="LMD.html">DML</a>
+        </div>
+
+        <p class="footer-copy">
+            © 2026 DB Learning
+        </p>
+    </div>
+</footer>
+</body>
+</html>
+</body>
+</html>

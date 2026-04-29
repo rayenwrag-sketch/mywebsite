@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<video autoplay muted loop id="bg-video">
+    <source src="https://media.istockphoto.com/id/1463959767/video/working-with-a-holographic-panel-to-set-up-satellite-communications.mp4?s=mp4-480x480-is&k=20&c=08l3zj4789fr3gIdKQTXUBGQbbK5KX74yiL529mF9IA=">
+</video>
+
+<nav>
+    <div class="container">
+        <h1>DB Learning</h1>
+        <ul>
+            <li><a href="base_page.html">Database</a></li>
+            <li><a href="LMM.html">DDL</a></li>
+            <li><a href="LMD.html" class="active">DML</a></li>
+            <li><a href="test.html" >Test</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="container">
+
+<h2>What is DML?</h2>
+
+<div class="block card">
+        <p>DML (Data Manipulation Language) is used to manage data inside database tables.</p>
+        <p>It includes INSERT, UPDATE, DELETE, SELECT operations.</p>
+        <p>🏗️ DDL = structure | 🧑‍💻 DML = data</p>
+
+    <div class="img-box">
+        <!-- IMAGE: student coding SQL -->
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+    </div>
+</div>
+
+<h2>INSERT</h2>
+<div class="block card reverse">
+        <p>INSERT adds new data into a table.</p>
+        <pre><code>
+INSERT INTO students (id, name)
+VALUES (1, 'Ali');
+        </code></pre>
+
+    <div class="img-box">
+        <!-- IMAGE: data entry -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYUmSOV_ASU6gLiAjMdGyoMAKLpgroKCE3uQ&s">
+    </div>
+
+</div>
+
+<h2>UPDATE</h2>
+<div class="block card">
+    <div class="content">
+        <p>UPDATE modifies existing data in a table.</p>
+        <pre>
+            <code>
+UPDATE students
+SET name = 'Ahmed'
+WHERE id = 1;
+        </code></pre>
+
+        <p>⚠️ Always use WHERE</p>
+    </div>
+
+    <div class="img-box">
+        <img src="https://images.openai.com/static-rsc-4/t6zMa-ZvXmblOdTN2RWW5m20SMOx3mdgJD4EN_oFUwmAw2fn-3k1GHGX_pzDHAbJsvyfL_KtPItKjegx0LcWhW1GkwU7H3fOFsTjM-JgA1EMxLZW2aWLMNlx6WZuKl6wKwehx6_0Xb6dkwzB55mKA_9T5L_rjgruxOfhVxaObpYPdXeJbL8tm3A7zSXaLXa6?purpose=fullsize">
+    </div>
+
+</div>
+
+<h2>DELETE</h2>
+
+<div class="block card reverse">
+
+    <div class="content">
+        <p>DELETE removes data from a table.</p>
+
+        <pre><code>
+DELETE FROM students
+WHERE id = 1;
+        </code></pre>
+
+        <p>⚠️ Without WHERE → deletes everything</p>
+    </div>
+
+    <div class="img-box">
+        <img src="https://powerbidocs.com/wp-content/uploads/2020/01/DELETE-Statement-SQL-SERVER.png">
+    </div>
+
+</div>
+
+<h2>SELECT</h2>
+
+<div class="block card">
+
+    <div class="content">
+        <p>SELECT retrieves data from database.</p>
+
+        <pre><code>
+SELECT * FROM students;
+        </code></pre>
+    </div>
+
+    <div class="img-box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSInrY49l6IcAHwXebb_XXiyNcKLlSaSgrUzA&s">
+    </div>
+
+</div>
+
+<h2>WHERE</h2>
+
+<div class="block card reverse">
+
+    <div class="content">
+        <p>WHERE filters data using conditions.</p>
+
+        <pre><code>
+SELECT * FROM students WHERE age > 18;
+        </code></pre>
+    </div>
+
+    <div class="img-box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJl59f1THNFdfVnSVXcmXwDPUrK7Z3VS-Mkg&s">
+    </div>
+
+</div>
+
+<h2>ORDER BY</h2>
+
+<div class="block card">
+
+    <div class="content">
+        <p>ORDER BY sorts results.</p>
+
+        <pre><code>
+SELECT * FROM students ORDER BY age DESC;
+        </code></pre>
+    </div>
+
+    <div class="img-box">
+        <img src="https://cdn.educba.com/academy/wp-content/uploads/2020/11/SQL-Order-by-Count.jpg">
+    </div>
+
+</div>
+
+<h2>GROUP BY</h2>
+
+<div class="block card reverse">
+
+    <div class="content">
+        <p>GROUP BY groups same values.</p>
+
+        <pre><code>
+SELECT age, COUNT(*) FROM students GROUP BY age;
+        </code></pre>
+    </div>
+
+    <div class="img-box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtizMMqfRdUNd4rQaC_nFG7p9qwrSuzNp3Yg&s">
+    </div>
+
+</div>
+
+<h2>INNER JOIN</h2>
+
+<div class="block card">
+
+    <div class="content">
+        <p>INNER JOIN connects multiple tables.</p>
+
+        <pre><code>
+SELECT s.name, c.course
+FROM students s
+INNER JOIN courses c
+ON s.id = c.student_id;
+        </code></pre>
+    </div>
+
+    <div class="img-box">
+        <img src="https://images.openai.com/static-rsc-4/-TTXeRFeYbBW41ufLv1G1hjMay3kizaReSQcpsfK2fjUz6G49Mlka1l12IlocEv1ZPwlJFwcHuXxDLLxcjOgyLaz3uRLzvVr_3CCllrxh70sI4u1xH1qTCaDhEptstoLAXK4h47Sy2hRrzv47Mcd3vBS9OAPhXnRIQ5DZECVZ3Qc5LiH8RXScqQTXnZHjraN?purpose=fullsize">
+    </div>
+
+</div>
+
+</section>
+
+</body>
+</html>
+ 
+<footer class="elite-footer">
+
+    <div class="footer-bg-glow"></div>
+
+    <div class="footer-card">
+
+        <h2 class="footer-title">Connect With Me</h2>
+        <p class="footer-sub">Let's build something amazing together 🚀</p>
+
+        <div class="footer-socials">
+
+            <a href="#" class="social instagram" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+            </a>
+
+            <a href="#" class="social gmail" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png">
+            </a>
+
+            <a href="#" class="social facebook" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg">
+            </a>
+
+            <a href="#" class="social tiktok" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
+            </a>
+
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <p class="footer-copy">
+            © 2026 DB Learning — Designed with precision ⚡
+        </p>
+
+    </div>
+
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+</div>
+
+<!-- EXTRA LINKS -->
+<div class="footer-extra">
+
+    <div class="col">
+        <h4>Resources</h4>
+        <a href="#">Documentation</a>
+        <a href="#">Tutorials</a>
+        <a href="#">Examples</a>
+    </div>
+
+    <div class="col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Support</a>
+    </div>
+
+    <div class="col">
+        <h4>Contact</h4>
+        <p>Email: Rayenwrag@gmail.com</p>
+        <p>Phone: +216 99 387 577</p>
+    </div>
+
+</div>
+
+<!-- STATUS BADGE -->
+<div class="status">
+    <span class="dot"></span> System Online
+</div>
+
+
+
+<!-- BACK TO TOP -->
+<a href="#" class="back-top">↑</a>
+</footer>
